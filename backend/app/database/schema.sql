@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS approvals (
     event_id TEXT NOT NULL REFERENCES tool_events(id) ON DELETE CASCADE,
     tool_name TEXT NOT NULL,
     arguments_json TEXT NOT NULL,
+    arguments_hash TEXT,
     reason TEXT NOT NULL,
     status TEXT NOT NULL,
     requested_at TEXT NOT NULL,
